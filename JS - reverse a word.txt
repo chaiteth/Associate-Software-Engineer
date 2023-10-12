@@ -1,0 +1,32 @@
+
+function reverseWords(sentence) {
+    return sentence.replace(/\w+/g, reverseWord);
+}
+
+function reverseWord(word) {
+    return word.split("").reverse().join("");
+}
+
+let userInput = prompt("Enter a sentence: ");
+
+let reversedResult = reverseWords(userInput);
+
+
+console.log("Reversed sentence: " + reversedResult);
+
+
+Descending order of sorting an array:
+
+let userInput = prompt("Enter numbers separated by spaces:");
+let numbers = userInput.split(" ").map(Number);
+
+if (numbers.some(isNaN)) {
+    console.log("Invalid input. Please enter valid numbers separated by spaces.");
+} else {
+
+    numbers.sort(function(a, b) {
+        return b - a;
+    });
+
+    console.log("Sorted in descending order: " + numbers.join(" "));
+}

@@ -1,0 +1,13 @@
+
+let userInput = prompt("Enter numbers separated by spaces:");
+let numbers = userInput.split(" ").map(Number);
+
+if (numbers.some(isNaN)) {
+    console.log("Invalid input. Please enter valid numbers separated by spaces.");
+} else {
+    numbers.sort(function(a, b) {
+        return b - a;
+    });
+
+    console.log("Sorted in descending order: " + numbers.join(" "));
+}
